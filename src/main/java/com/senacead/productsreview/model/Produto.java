@@ -7,15 +7,15 @@ public class Produto {
     //atributos
     private Integer id;
     private String nome;
-    private Integer categoria_id;
+    private Categoria c;
     private String descricao;
     private Date data_cadastro;
 
     //construtor
-    public Produto(Integer id, String nome, Integer categoria_id, String descricao) {
+    public Produto(Integer id, String nome, Categoria c, String descricao) {
         this.id = id;
         this.nome = nome;
-        this.categoria_id = categoria_id;
+        this.c = c;
         this.descricao = descricao;
     }
     
@@ -41,12 +41,12 @@ public class Produto {
         this.nome = nome;
     }
 
-    public Integer getCategoria_id() {
-        return categoria_id;
+    public Categoria getCategoria() {
+        return c;
     }
 
-    public void setCategoria_id(Integer categoria_id) {
-        this.categoria_id = categoria_id;
+    public void setCategoria(Categoria c) {
+        this.c = c;
     }
 
     public String getDescricao() {
